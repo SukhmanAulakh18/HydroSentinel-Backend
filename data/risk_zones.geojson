@@ -1,0 +1,110 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Industrial Zone A",
+        "risk_score": 0.85,
+        "description": "High contamination risk near factories"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.47,
+              43.6
+            ],
+            [
+              -79.44,
+              43.6
+            ],
+            [
+              -79.44,
+              43.63
+            ],
+            [
+              -79.47,
+              43.63
+            ],
+            [
+              -79.47,
+              43.6
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Urban Runoff Zone B",
+        "risk_score": 0.44,
+        "description": "Medium risk from urban drainage"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.42,
+              43.57
+            ],
+            [
+              -79.39,
+              43.57
+            ],
+            [
+              -79.39,
+              43.6
+            ],
+            [
+              -79.42,
+              43.6
+            ],
+            [
+              -79.42,
+              43.57
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Residential Zone C",
+        "risk_score": 0.18,
+        "description": "Low risk residential area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -79.37,
+              43.54
+            ],
+            [
+              -79.34,
+              43.54
+            ],
+            [
+              -79.34,
+              43.57
+            ],
+            [
+              -79.37,
+              43.57
+            ],
+            [
+              -79.37,
+              43.54
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
