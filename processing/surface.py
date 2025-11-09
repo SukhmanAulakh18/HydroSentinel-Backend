@@ -27,21 +27,12 @@ def get_surface_health():
         }
     """
     try:
-        # Import rasterio lazily so the module can be analyzed/run when rasterio is not installed.
-        import rasterio
-    except ImportError:
-        return {"error": "rasterio library not installed. Install with: pip install rasterio"}
-
-    try:
         with rasterio.open(NDWI_PATH) as src:
             ndwi = src.read(1)
             bounds = src.bounds
     except FileNotFoundError:
         print(f"Error: {NDWI_PATH} not found. Check data/ folder.")
         return {"error": "NDWI file not found"}
-    except Exception as e:
-        print(f"Error opening NDWI file: {e}")
-        return {"error": "Failed to open NDWI file"}
 
     water_mask = ndwi > 0.1
     healthy_mask = ndwi > 0.3
@@ -65,6 +56,7 @@ def get_surface_health():
         },
         "overlay_url": "http://localhost:8000/static/ndwi_overlay.png",
     }
+
 
 if __name__ == "__main__":
     result = get_surface_health()
